@@ -24,7 +24,7 @@ function xml_Convert_greg( $file ) {
 
         // get contents, clean ampersands
         // you can edit regex to clean other symbols as well
-        $xml_i = file_get_contents( 'input.xml' );
+        $xml_i = file_get_contents( $file );
         $xml_i = preg_replace( "/&(?!amp)/", "&amp;", $xml_i );
         
         // write back into the file
