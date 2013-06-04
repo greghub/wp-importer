@@ -22,7 +22,7 @@ function xml_Convert_greg( $file ) {
 
     if (file_exists( $file )) {
 
-      // get contents, clean ampersands
+        // get contents, clean ampersands
         // you can edit regex to clean other symbols as well
         $xml_i = file_get_contents( 'input.xml' );
         $xml_i = preg_replace( "/&(?!amp)/", "&amp;", $xml_i );
@@ -52,7 +52,7 @@ function xml_Convert_greg( $file ) {
         $channel->addChild( 'generator', 'http://wordpress.org/?v=3.5.1' );
 
         foreach ( $items as $key => $item ) {
-            $i++;
+
             $item = (array) $item;
            
             $itemXML = $channel->addChild( 'item') ;
@@ -102,8 +102,8 @@ function xml_Convert_greg( $file ) {
             $metaKey = $postMeta->addChild( 'a:wp:meta_key', 'NEWS_SOURCE' );
             $meta_value = $postMeta->addChild( 'a:wp:meta_value', htmlspecialchars( $item['NEWS_SOURCE'] ) );
             
-            // need 
-            Header('Content-type: text/xml');
+            // uncomment if needed
+            //Header('Content-type: text/xml');
 
         }
         $res = $channel_input->asXML();
