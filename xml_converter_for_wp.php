@@ -114,7 +114,7 @@ function xml_Convert_greg( $file ) {
 
         return true;
     } else {
-        exit('Failed to open test.xml.');
+        exit("Failed to open $file");
     }
 }
 ?>
