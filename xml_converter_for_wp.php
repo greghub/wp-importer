@@ -7,7 +7,7 @@ www: http://sevenaristocrats.com/, https://github.com/greghub
 This script converts XML files into a format recognized by wp-importer. 
 It's used to quickly import XML data into wordpress as posts.
 
-git v1
+git v2
 */
 
 
